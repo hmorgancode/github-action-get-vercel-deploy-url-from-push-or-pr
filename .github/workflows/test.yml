@@ -1,0 +1,25 @@
+name: Unit Test
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+      - 'releases/*'
+
+jobs:
+  unit_test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    # don't I need to check out node?
+    - run: npm ci
+    - run: npm test
+
+  # test action works running from the graph
+  #test:
+  #  runs-on: ubuntu-latest
+  #  steps:
+  #  - uses: actions/checkout@v2
+  #  - uses: ./
+  #    with:
+  #      milliseconds: 1000

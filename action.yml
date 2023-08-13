@@ -1,0 +1,14 @@
+name: Get Vercel deploy URL
+author: Bram Arcade
+description: Get latest Vercel deploy URL by commit's github user
+inputs:
+  delay-fetch-ms:
+    description: Number of milliseconds to wait to hit the Vercel API
+    required: false
+    default: 69
+outputs:
+  vercel-deployment-url: # output will be available to future steps
+    description: The URL of the user\'s most recent vercel deploy
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
