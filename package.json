@@ -29,7 +29,7 @@
   "homepage": "https://github.com/bramarcade/github-action-get-vercel-deploy-url-from-push-or-pr#readme",
   "dependencies": {
     "@actions/core": "^1.10.0",
-    "@actions/github": "^5.0.0",
+    "@actions/github": "^6.0.0",
     "axios": "^0.26.1"
   },
   "devDependencies": {
